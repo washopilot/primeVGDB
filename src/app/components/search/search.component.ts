@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterService } from "primeng/api";
 
 interface City {
   name: string;
@@ -13,7 +14,8 @@ interface City {
 export class SearchComponent implements OnInit {
   cities: City[];
 
-  selectedCity: City | undefined;
+  selectedCity: any;
+  value1: any;
 
   constructor() {
     this.cities = [
