@@ -8,8 +8,12 @@ indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.html]
+max_line_length = 200
+
 [*.ts]
 quote_type = single
+max_line_length = 80
 
 [*.md]
 max_line_length = off
