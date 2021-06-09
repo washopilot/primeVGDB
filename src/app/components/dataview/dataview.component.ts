@@ -10,9 +10,11 @@ export class DataviewComponent implements OnInit {
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
-    this.httpService.getAll().subscribe(
-      (result: any) => {
-        console.log(result);
+    this.httpService.getGameList().subscribe(
+      ({ results }) => {
+        results.forEach((element: any) => {
+          console.log(element.name);
+        });
       },
       (error) => {
         console.log(error);
