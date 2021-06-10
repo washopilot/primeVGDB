@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DataViewModule } from 'primeng/dataview';
 import { RatingModule } from 'primeng/rating';
+import { KnobModule } from 'primeng/knob';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { DataviewComponent } from './components/dataview/dataview.component';
     HttpClientModule,
     DataViewModule,
     RatingModule,
+    KnobModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
