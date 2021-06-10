@@ -11,7 +11,9 @@ export class HttpService {
 
   params = new HttpParams()
     .set('key', 'c52d1f197c8a48919f54b886a736ba47')
-    .set('page', 1);
+    .set('page', 1)
+    .set('page_size', 40)
+    // .set('ordering', 'released');
 
   constructor(private http: HttpClient) {}
 

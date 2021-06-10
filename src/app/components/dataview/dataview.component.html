@@ -1,1 +1,30 @@
 <p>dataview works!</p>
+
+<div class="card">
+  <p-dataView #dv [value]="games" [paginator]="true" [rows]="9" filterBy="name" layout="grid">
+    <ng-template let-game pTemplate="gridItem">
+      <div class="p-col-12 p-md-4">
+        <div class="game-grid-item card">
+          <!-- <div class="game-grid-item-top">
+                    <div>
+                        <i class="pi pi-tag product-category-icon"></i>
+                        <span class="game-category">{{game.category}}</span>
+                    </div>
+                    <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                </div> -->
+          <div class="game-grid-item-content">
+            <img *ngIf="game.background_image" src="{{ game.background_image }}" alt="{{ game.name }}" />
+            <p *ngIf="!game.background_image">No image</p>
+            <div class="game-name">{{ game.name }}</div>
+            <!-- <div class="product-description">{{ product.description }}</div>
+            <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating> -->
+          </div>
+          <!-- <div class="product-grid-item-bottom">
+            <span class="product-price">${{ product.price }}</span>
+            <p-button icon="pi pi-shopping-cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+          </div> -->
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
+</div>
