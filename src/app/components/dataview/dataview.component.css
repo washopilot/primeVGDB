@@ -16,11 +16,11 @@
 }
 
 .game-grid-item-content img {
-  width: 75%;
-  height: 15rem;
+  width: 85%;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .game-grid-item-content .p-rating {
