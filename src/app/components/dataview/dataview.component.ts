@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APIResponse, Game } from 'src/app/models';
+import { APIResponse, Result } from 'src/app/models';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -8,16 +8,15 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./dataview.component.css'],
 })
 export class DataviewComponent implements OnInit {
-  games: Array<Game> = [];
+  games: Result[] = [];
 
   constructor(private httpService: HttpService) {}
 
   ngOnInit(): void {
     this.httpService.getGameList().subscribe(
-      (gameList: APIResponse<Game>) => {
+      (gameList: APIResponse) => {
         this.games = gameList.results;
         console.log(this.games);
-        console.log(gameList);
       },
       (error) => console.log(error)
     );

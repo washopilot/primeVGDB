@@ -1,5 +1,5 @@
 <div class="card">
-  <p-dataView #dv [value]="games" [paginator]="true" [rows]="6" filterBy="name" layout="grid">
+  <p-dataView [value]="games" [paginator]="true" [rows]="6" layout="grid">
     <ng-template let-game pTemplate="gridItem">
       <div class="p-col-12 p-md-4">
         <div class="game-grid-item card">
