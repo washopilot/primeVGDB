@@ -18,22 +18,11 @@ export class HttpService {
     );
 
     if (page) {
-      params = new HttpParams()
-        .set('key', 'c52d1f197c8a48919f54b886a736ba47')
-        .set('page', page);
+      params = params.set('page', page);
     }
 
     if (page_size) {
-      params = new HttpParams()
-        .set('key', 'c52d1f197c8a48919f54b886a736ba47')
-        .set('page_size', page_size);
-    }
-
-    if (page && page_size) {
-      params = new HttpParams()
-        .set('key', 'c52d1f197c8a48919f54b886a736ba47')
-        .set('page', page)
-        .set('page_size', page_size);
+      params = params.set('page_size', page_size);
     }
 
     return this.http.get<APIResponse>(this.baseURL + '/games', {
